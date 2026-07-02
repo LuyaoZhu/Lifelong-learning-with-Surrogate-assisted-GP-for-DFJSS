@@ -26,14 +26,9 @@ The package is built upon the Java-based ECJ (Evolutionary Computation in Java) 
 
 ## 📂 Key Architecture Modifications
 
-The core components of the proposed lifelong learning and surrogate mechanisms are located within `/src/yimei/jss/`:
-
-* `algorithm/lifelongGP/`: Contains parameter files and initialization specifications for sequential task dynamic environments.
-* `surrogate/`: Implements Gaussian Process Regression (GPR), proxy evaluators, and adaptive fitness weighting mechanisms ($0.5 \text{ base} + 0.5 \text{ competition}$) to handle catastrophic forgetting.
-* `simulation/`: Implements the discrete event simulation protocol for assessing generalized rules under different workstation utilizations and arrival distributions.
+The core components of the proposed lifelong learning and surrogate mechanisms are located within `/src/yimei/jss/algorithm/lifelongGP/`:
 
 ---
-
 ## 🚀 Running Experiments: Launching the Proposed Lifelong GP
 
 1. Locate the target parameter configuration file:
