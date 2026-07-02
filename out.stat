@@ -1,0 +1,620 @@
+
+Generation: 0
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (Max NPT WKR)
+Tree 1:
+ (- (+ (+ (+ WIQ WKR) (Max PT PT)) (Min (* TIS TIS) (/ R R))) (* (- (Min MWT rDD) (Max W OWT)) (Min (+ R W) (* PT NIQ))))
+
+Generation: 1
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [324.2106040830895]
+Tree 0:
+ (Max NPT WKR)
+Tree 1:
+ (- (+ (+ (+ WIQ WKR) (Max PT PT)) (Min (* TIS TIS) (/ R R))) (* (- (Min MWT rDD) (Max W OWT)) (Min (+ R W) (* PT NIQ))))
+
+Generation: 2
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (Max rDD WKR)
+Tree 1:
+ (- (+ (+ (+ WIQ WKR) (Max PT PT)) (Min (* TIS TIS) (/ R (Max OWT R)))) (* (- (Min MWT rDD) (Max W OWT)) (Min (+ R W) (* PT NIQ))))
+
+Generation: 3
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (Max rDD WKR)
+Tree 1:
+ (- (+ (+ (+ WIQ WKR) (Max PT PT)) (Min (* TIS TIS) (/ R (Max OWT R)))) (* (- (Min MWT rDD) (+ (+ WIQ WKR) (Max PT PT))) (Min (+ R W) (* PT NIQ))))
+
+Generation: 4
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (Max WKR (+ R WKR))
+Tree 1:
+ (+ (+ OWT PT) (* (+ W NIQ) (Max NCM PT)))
+
+Generation: 5
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (Max NIQ WKR)
+Tree 1:
+ (* (Max (* SL W) (+ (Max PT PT) (Min WIQ WKR))) (- BWKR NOR))
+
+Generation: 6
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (Max WKR (Max NPT WKR))
+Tree 1:
+ (+ (- (+ (+ OWT PT) (* (+ W NIQ) (Max NCM PT))) (/ (Max (- (- (Min MWT rDD) (Max W OWT)) (* NOR BNOR)) (Min (* (- WIQ OWT) (* NIQ BNOR)) WIQ)) (* BWKR (/ WKR BWKR)))) (* (+ W NIQ) (Max NCM PT)))
+
+Generation: 7
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (Max WKR (+ (Min (Max WKR (- MWT rDD)) (/ BWKR BNOR)) (Max (/ rDD BWKR) WKR)))
+Tree 1:
+ (* (Max (Max PT PT) (+ R W)) (Max BWKR (* (+ (+ (+ WIQ WKR) (Max PT PT)) (Min (* TIS (Max W NPT)) (/ R R))) (Min PT (+ (Min PT (* PT NIQ)) (* (+ W NIQ) (Max NCM PT)))))))
+
+Generation: 8
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (Max (Min WIQ WKR) (Min NPT BWKR))
+Tree 1:
+ (+ (- (+ (Max PT PT) (Min (* PT NIQ) (/ R (Max OWT R)))) NIQ) (+ (- (+ (Min (Min WIQ NCM) (Max PT MWT)) (Min (Min TIS TIS) (Min NOR NIQ))) NIQ) (* (+ W NIQ) (Max NCM PT))))
+
+Generation: 9
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (Max WKR (+ (Min (Max rDD WKR) (/ BWKR BNOR)) (+ R WKR)))
+Tree 1:
+ (* (Max (Max PT PT) (Min TIS NPT)) (Max BWKR (* (* (* (+ W NIQ) (Max NCM PT)) R) BWKR)))
+
+Generation: 10
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (Max (+ (+ WKR WKR) (Min WKR (Min NPT BWKR))) WKR)
+Tree 1:
+ (+ (* (* (Max (* SL W) (* TIS TIS)) (Max NIQ PT)) NIQ) (* (+ (Min WIQ WKR) (Max PT PT)) (Max NCM PT)))
+
+Generation: 11
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (Max WKR (+ (Min (Max rDD WKR) (/ BWKR BNOR)) (Max WKR (+ (Min (Max (Min PT BWKR) (Max rDD WKR)) (/ BWKR BNOR)) (Max (/ rDD BWKR) WKR)))))
+Tree 1:
+ (* (Max (Max PT PT) (+ R W)) (Max (* TIS TIS) (* (+ (+ (+ WIQ WKR) (Max PT PT)) (* (+ W NIQ) (Max NCM PT))) BWKR)))
+
+Generation: 12
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max NPT WKR) (+ W WKR))
+Tree 1:
+ (* (* (+ (+ (+ WIQ WKR) (Max PT PT)) (* (+ W NIQ) (Max NCM PT))) BWKR) (Max BWKR (* (+ (+ (* PT NIQ) (Max NCM PT)) (Min (* TIS (Max W NPT)) (/ R R))) BWKR)))
+
+Generation: 13
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max NPT WKR) (+ W WKR))
+Tree 1:
+ (* (* (+ (+ (+ WIQ WKR) (Max PT PT)) (* (+ W NIQ) (Max NCM PT))) BWKR) (Max BWKR (* (+ (+ (* PT NIQ) (Max NCM PT)) (Min (* TIS (Max W NPT)) (/ R R))) BWKR)))
+
+Generation: 14
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max NPT WKR) (+ W WKR))
+Tree 1:
+ (* (* (+ (+ (+ WIQ WKR) (Max PT PT)) (* (+ W NIQ) (Max NCM PT))) BWKR) (Max BWKR (* (+ (+ (* PT NIQ) (Max NCM PT)) (Min (* TIS (Max W NPT)) (/ R R))) BWKR)))
+
+Generation: 15
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max NPT WKR) (+ W (+ WKR WKR)))
+Tree 1:
+ (* (Max BWKR (* (+ (+ (+ WIQ WKR) (Max NIQ PT)) (Max PT PT)) BWKR)) (Max BWKR (* (+ (+ (* PT NIQ) (Max NCM PT)) (Min (* TIS (Max W NPT)) (/ R R))) BWKR)))
+
+Generation: 16
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max NPT WKR) (+ W (+ (Max (/ rDD BWKR) WKR) (- MWT (Max WKR (Max WKR WKR))))))
+Tree 1:
+ (* (* (+ (Max PT PT) (* (+ W NIQ) (Max NCM PT))) BWKR) (Max BWKR (* (+ (+ (* PT NIQ) (Max NCM PT)) (Min (* TIS (Max W NPT)) (* PT NIQ))) BWKR)))
+
+Generation: 17
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max NPT WKR) (- MWT (+ R WKR))) WKR) (+ W WKR))
+Tree 1:
+ (* (Max (Max NCM PT) (Min TIS NPT)) (Max BWKR (* (+ (+ (+ WIQ WKR) (Max PT PT)) (Min (* TIS (Max W NPT)) (/ R (Max W NPT)))) (Max PT PT))))
+
+Generation: 18
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max WKR (+ (Min (Max (Max rDD WKR) WKR) (/ BWKR BNOR)) (- MWT (/ (Max rDD WKR) BNOR)))) (+ W (+ WKR WKR)))
+Tree 1:
+ (* (Max (Max PT PT) (Min TIS NPT)) (Max BWKR (* (+ (+ (+ WIQ WKR) (Max PT (* PT NIQ))) (Min (* TIS (Max W NPT)) (/ R (Max W NPT)))) (Max PT PT))))
+
+Generation: 19
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max WKR (+ (Min (Max (Max rDD WKR) WKR) (Max rDD WKR)) (- MWT (/ (Max rDD WKR) BNOR)))) (+ W (+ WKR WKR)))
+Tree 1:
+ (* (Max (Max PT PT) (Min TIS NPT)) (Max BWKR (* (+ (+ (+ WIQ WKR) (Max PT (* PT NIQ))) (Max PT PT)) (Max PT PT))))
+
+Generation: 20
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max NPT WKR) (- MWT (+ R WKR))) WKR) (+ W WKR))
+Tree 1:
+ (* (Max (Max NCM PT) (Min TIS NPT)) (Max BWKR (* (+ (+ (+ WIQ WKR) (Max PT PT)) (Min (* TIS (Max W NPT)) (/ R (Max W NPT)))) (Max PT PT))))
+
+Generation: 21
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max NPT WKR) (- MWT (/ (+ WKR WKR) (+ W WKR)))) WKR) (+ W WKR))
+Tree 1:
+ (* (Max (Max NCM PT) (* TIS NIQ)) (Max BWKR (* (+ (+ (+ WIQ WKR) (Max PT PT)) (Min (* TIS (Max W NPT)) (Max NCM PT))) (Max PT PT))))
+
+Generation: 22
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max (Max (Max NPT WKR) (- MWT (+ R WKR))) WKR) (- MWT (+ R WKR))) WKR) (+ W WKR))
+Tree 1:
+ (* (Max (Max NCM PT) (Min TIS NPT)) (Max BWKR (* (+ (+ (+ WIQ WKR) (Max PT PT)) (Min (* TIS (Max W NPT)) (/ R (Max NCM PT)))) (* (+ (+ (* PT NIQ) WKR) (Max (Max NCM PT) (Min TIS NPT))) BWKR))))
+
+Generation: 23
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max (/ (Max NPT WKR) (+ W WKR)) WKR) (- MWT (+ R WKR))) WKR) (+ W (Max SL WKR)))
+Tree 1:
+ (* (Max (Max NCM PT) (Min TIS NPT)) (Max BWKR (* (+ (+ (+ WIQ WKR) (Max PT PT)) (Min (Min TIS NPT) (/ R (Max W NPT)))) (Max W NPT))))
+
+Generation: 24
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max NPT WKR) (- MWT (+ R WKR))) (+ W WKR))
+Tree 1:
+ (* (Max (Max NCM PT) (* (/ (* BNOR rDD) (Max MWT PT)) (Max (Min NOR TIS) (Min BWKR PT)))) (Max BWKR (* (+ (+ (+ WIQ WKR) (Max PT PT)) (Min (/ R R) (/ R (Max W NPT)))) (Max PT PT))))
+
+Generation: 25
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (+ (Min (Max (Max rDD WKR) WKR) (/ BWKR BNOR)) (- MWT (/ BWKR BNOR))) (Min WIQ WKR)) WKR) (+ W WKR))
+Tree 1:
+ (* (* (+ (+ (+ (+ WIQ WKR) (Max PT PT)) (Min (* TIS (Max W NPT)) (/ R (Max W NPT)))) (* PT NIQ)) BWKR) (Max BWKR (* (+ (Max PT PT) (Min (* TIS (Max W NPT)) rDD)) BWKR)))
+
+Generation: 26
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (- MWT (+ R WKR)) WKR) (+ W WKR))
+Tree 1:
+ (* (* (+ (+ (+ WIQ WKR) (Max PT PT)) (* PT NIQ)) BWKR) (Max BWKR (* (+ (+ (Max NCM PT) (Max NCM PT)) (Min (* TIS (Max W NPT)) (/ R R))) BWKR)))
+
+Generation: 27
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (+ (Min (/ WKR (+ W WKR)) (/ BWKR BNOR)) (- MWT (+ W (+ WKR WKR)))) (/ (Max WKR (+ (Max NPT WKR) (- MWT WKR))) (+ W (+ WKR WKR)))) WKR) (+ W WKR))
+Tree 1:
+ (* (* (+ (+ (* PT NIQ) WKR) (Max PT PT)) BWKR) (Max (Max (Max PT PT) (Min TIS NPT)) (* (+ (Max PT PT) (Min (* TIS (Max W NPT)) (Max PT PT))) BWKR)))
+
+Generation: 28
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (+ (Min (Max (- (Max NPT WKR) W) WKR) (/ BWKR BNOR)) (- (Max NPT WKR) (/ BWKR BNOR))) WKR) (+ W WKR))
+Tree 1:
+ (* (* (+ (+ (+ WIQ WKR) (Max PT PT)) (+ PT (Max PT PT))) BWKR) (Max BWKR (* (+ (+ (Max NCM PT) (Max NCM PT)) (Min (* TIS (Max W NPT)) (/ R PT))) BWKR)))
+
+Generation: 29
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max (/ (Max NPT (Min NPT NPT)) (/ BWKR BNOR)) WKR) (- MWT (+ R WKR))) WKR) (+ W WKR))
+Tree 1:
+ (* (* (+ (+ (* PT NIQ) (Max PT (Min TIS NPT))) (* TIS (Max W NPT))) BWKR) (Max (* (Max PT PT) NIQ) (* (Max NCM PT) BWKR)))
+
+Generation: 30
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max (/ (- MWT (+ R WKR)) (+ W WKR)) WKR) (- MWT (+ R WKR))) (- MWT (+ WKR WKR))) W)
+Tree 1:
+ (* (Max (Max NCM PT) (Min TIS NPT)) (Max BWKR (* (+ (+ (+ WIQ WKR) (* PT NIQ)) (Min (Max W NPT) (/ R (Max W NPT)))) (* (+ (+ W PT) (Max PT PT)) (/ (Max SL TIS) (Min PT W))))))
+
+Generation: 31
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max (Max MWT (- MWT (+ R WKR))) WKR) (- MWT (Max MWT (- MWT (+ R WKR))))) WKR) W)
+Tree 1:
+ (* (Max (Max NCM PT) (Min TIS NPT)) (Max (Max W NPT) (* (+ (+ (+ (Max PT PT) WKR) (* PT NIQ)) (+ (+ WIQ WKR) (Max W NPT))) (Max PT PT))))
+
+Generation: 32
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max (/ (Max (Max rDD WKR) WKR) (+ W WKR)) WKR) (- MWT (+ R WKR))) (- MWT (+ WKR WKR))) W)
+Tree 1:
+ (* (Max (Max NCM PT) (Max NCM PT)) (Max BWKR (* (+ (+ (+ WIQ WKR) (* PT NIQ)) (Min (Max W NPT) (/ R (Max W NPT)))) (* (+ (+ W PT) (Max PT PT)) (/ (Max SL TIS) (Min PT W))))))
+
+Generation: 33
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (+ (Min (/ WKR (+ W WKR)) (/ BWKR BNOR)) (- MWT (+ R WKR))) (/ (Max WKR (+ (Max NPT WKR) (- MWT WKR))) (+ W (+ WKR WKR)))) WKR) (+ W WKR))
+Tree 1:
+ (* (* (+ (+ (+ (* PT NIQ) WKR) (Max (Max (Max NCM PT) (Min TIS NPT)) PT)) (Max PT PT)) BWKR) (Max (Max (Max (Max NCM PT) (* (+ (+ WIQ WKR) (Max PT PT)) (Max W NPT))) (Min TIS NPT)) (* (+ (Max PT PT) (Min TIS (Max PT PT))) BWKR)))
+
+Generation: 34
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max MWT (- MWT (+ W WKR))) WKR) WKR) (+ W WKR))
+Tree 1:
+ (* (Max BWKR (* (+ (+ (+ WIQ WKR) (* PT NIQ)) (+ PT (Max PT PT))) (Max PT PT))) (Max BWKR (* (+ (Max (+ (* PT NIQ) WKR) PT) (- (Min (Min BNOR NCM) (Min NIQ WKR)) (+ TIS (/ NCM MWT)))) (* (+ (+ (+ WIQ WKR) (* PT NIQ)) (Max (Max NCM PT) (Min TIS NPT))) BWKR))))
+
+Generation: 35
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max (Max MWT (- MWT (+ W WKR))) WKR) (- MWT (+ R WKR))) WKR) W)
+Tree 1:
+ (* (Max (Max NCM PT) (Min TIS NPT)) (Max BWKR (* (+ (+ (+ WIQ WKR) (Max (Max NCM PT) (Max NCM PT))) (* TIS (Max W NPT))) (Max W NPT))))
+
+Generation: 36
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max (/ (- MWT (+ R WKR)) (+ W (Max NPT WKR))) WKR) (- MWT (+ R WKR))) (- MWT (+ R WKR))) W)
+Tree 1:
+ (* (Max (Max NCM PT) (Max W NPT)) (Max BWKR (* (+ (+ (+ WIQ WKR) (* PT NIQ)) (Min (Max W NPT) (/ R (Max W NPT)))) (* (+ (+ W PT) (Max PT PT)) (/ (Max SL TIS) (Min (* PT NIQ) W))))))
+
+Generation: 37
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max (/ (- MWT (+ WKR WKR)) (+ W WKR)) WKR) (- MWT (+ R WKR))) (- MWT (Max (Max (Max MWT (- MWT R)) WKR) (- MWT (+ R WKR))))) W)
+Tree 1:
+ (* (Max (Max NCM PT) (Max NCM PT)) (Max BWKR (* (+ (+ (/ (Max SL TIS) (Min PT W)) (* PT NIQ)) (Min (Max W NPT) (/ R (Max W NPT)))) (* (+ (+ (+ W PT) PT) (Max PT PT)) (/ (Max SL TIS) (Min PT W))))))
+
+Generation: 38
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max (/ WKR (+ W WKR)) WKR) (- MWT (+ R WKR))) (Max (Max (Max (Max rDD WKR) WKR) (- MWT (+ R WKR))) (- MWT (+ WKR WKR)))) W)
+Tree 1:
+ (* (Max (Max (Min TIS NPT) PT) (* (+ (+ W PT) (Max PT PT)) (/ (Max SL TIS) (Min PT W)))) (Max BWKR (* (+ (+ (+ WIQ WKR) (* PT NIQ)) (Max PT PT)) (* (+ (+ W PT) (/ (Max SL TIS) (Min PT W))) (/ (Max SL TIS) (Min PT W))))))
+
+Generation: 39
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max (/ (Max (Max rDD WKR) WKR) (+ W WKR)) WKR) (- MWT (+ R WKR))) (Max (+ (Max (Min (+ W WKR) (/ BWKR BNOR)) WKR) (- MWT (+ R WKR))) (Max (- MWT (+ R WKR)) WKR))) W)
+Tree 1:
+ (* (* (+ (+ W PT) (Max PT PT)) (/ (Max SL TIS) (Min PT W))) (Max (Min TIS NPT) (* (+ (+ (+ WIQ WKR) (* PT NIQ)) (Min (+ (* PT NIQ) WKR) (/ R (Max W NPT)))) (* (+ (+ W PT) (Max PT PT)) (/ (Max (Max NCM PT) (Max NCM PT)) (Min PT W))))))
+
+Generation: 40
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max (/ (Max (Max rDD WKR) WKR) (Min PT MWT)) WKR) (- MWT (Max rDD WKR))) (- MWT (+ R WKR))) W)
+Tree 1:
+ (* (Max (Max NCM PT) (Max NCM PT)) (Max (Min TIS NPT) (* (+ (+ (+ WIQ WKR) (Max PT PT)) (Min (Max W NPT) (/ R (Max W NPT)))) (* (+ (+ W PT) (Max PT PT)) (/ (Max SL TIS) (Min PT W))))))
+
+Generation: 41
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max (- MWT (Max rDD WKR)) WKR) (- MWT (Min (/ (Max NCM R) (/ SL OWT)) NIQ))) (- MWT (Max rDD WKR))) W)
+Tree 1:
+ (* (Max (Max NCM PT) (Min TIS NPT)) (Max BWKR (* (+ (+ (+ WIQ WKR) (Max NCM PT)) (Max PT PT)) (* (+ (+ W PT) (/ (Max SL TIS) (Min PT W))) (/ (Max SL TIS) (/ (Max SL TIS) (Min PT W)))))))
+
+Generation: 42
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max (/ (- MWT (+ R WKR)) (+ W WKR)) WKR) (- MWT (+ R WKR))) (- MWT (+ R WKR))) W)
+Tree 1:
+ (* (/ (Max SL TIS) (Min PT W)) (Max BWKR (* (+ (+ (+ WIQ WKR) (* PT NIQ)) (+ (+ W PT) (/ (Max SL TIS) (Min PT W)))) (* (+ (+ W PT) (Max PT PT)) (/ (Max SL TIS) (Min PT W))))))
+
+Generation: 43
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max (- MWT (- MWT (+ WKR WKR))) WKR) (- MWT (+ R WKR))) (Max (+ (Max (+ W WKR) WKR) (- MWT (+ R WKR))) (Max (- MWT (- MWT (Min NPT TIS))) WKR))) W)
+Tree 1:
+ (* (* (+ (+ W PT) (Max PT PT)) (/ (Max SL TIS) (Min PT W))) (Max (Min TIS NPT) (* (+ (+ (Max W NPT) (* PT NIQ)) (Min (+ BWKR WKR) (Max W NPT))) (* (+ (Max NCM PT) (Max PT PT)) (/ (Max SL TIS) (Min PT W))))))
+
+Generation: 44
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max (Min (+ W WKR) (/ BWKR BNOR)) WKR) (- MWT (+ R WKR))) (Max (+ (Max (Min (+ W WKR) (/ BWKR BNOR)) WKR) (- MWT (+ R WKR))) (Max (- MWT (+ R WKR)) WKR))) W)
+Tree 1:
+ (* (* (+ (+ W PT) (Max PT PT)) (/ (Max SL TIS) (Min PT W))) (Max (Min TIS NPT) (* (+ (+ (+ WIQ WKR) (+ WIQ WKR)) (Min (+ (* PT NIQ) WKR) (/ R (Max W NPT)))) (* (+ (+ W PT) (Max PT PT)) (/ (Max NPT (Max NCM PT)) (Min PT W))))))
+
+Generation: 45
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (/ (- MWT (+ WKR WKR)) (+ R WKR)) (Max (Max rDD WKR) WKR)) W) W)
+Tree 1:
+ (* (Max (Max NCM PT) (Min (+ (+ W PT) (/ (Max SL TIS) (Min PT W))) NPT)) (Max BWKR (* (+ (+ (+ WIQ WKR) (* PT NIQ)) BWKR) (* (+ (+ W PT) (+ W PT)) (/ (/ (Max SL TIS) (Min PT W)) WKR)))))
+
+Generation: 46
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Min (- (Max rDD SL) (- NPT OWT)) (* (/ (- BNOR WIQ) (+ rDD rDD)) (- (Max rDD SL) (- NPT OWT)))) (Max (- MWT (+ WKR WKR)) WKR)) (Max (Min (- (Max rDD SL) (- NPT OWT)) (* (/ BWKR BNOR) (* (* WIQ MWT) BWKR))) (Max (/ (- MWT (+ R WKR)) (+ W WKR)) WKR))) W)
+Tree 1:
+ (* (Max (Max (* (+ (+ W PT) (+ W PT)) (/ (Max SL TIS) (Min PT W))) PT) (Min TIS NPT)) (Max BWKR (* (+ (+ (+ WIQ WKR) (* PT NIQ)) (+ W PT)) (* (+ (+ W PT) (/ (Max SL TIS) (Min PT W))) (/ (Max SL TIS) (Min PT W))))))
+
+Generation: 47
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (- MWT (- MWT (+ WKR WKR))) W) W)
+Tree 1:
+ (* (Max (Max NCM PT) (Min (+ (+ W PT) (/ (Max SL TIS) (Min PT W))) NPT)) (Max BWKR (* (+ (+ (+ WIQ WKR) (* PT NIQ)) BWKR) (* (+ (+ W PT) (+ (Min PT W) PT)) (/ (/ (Max SL TIS) (Min PT W)) (Min PT W))))))
+
+Generation: 48
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max (/ (- MWT WKR) rDD) WKR) (Max (Max rDD WKR) WKR)) W) W)
+Tree 1:
+ (* (Max (Max NCM PT) (Min (+ (+ W PT) W) NPT)) (Max BWKR (* (+ (+ (Max NCM PT) (* PT NIQ)) BWKR) (* (/ (Max SL TIS) (Min PT W)) (/ (Max SL TIS) (Min PT W))))))
+
+Generation: 49
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max (/ (- MWT WKR) rDD) WKR) (Max (Max rDD WKR) WKR)) W) W)
+Tree 1:
+ (* (Max (Max NCM PT) (Min (+ (+ W PT) W) NPT)) (Max BWKR (* (+ (+ (+ WIQ WKR) (* PT NIQ)) BWKR) (* (/ (Max SL TIS) (Min PT W)) (/ (Max SL TIS) (Min PT W))))))
+
+Generation: 50
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (+ W WKR) (+ W WKR)) (Max (Min (- (Max rDD SL) (- NPT OWT)) (* (+ R WKR) (- (Max rDD SL) (- NPT OWT)))) (Max (- MWT (+ WKR WKR)) WKR))) W)
+Tree 1:
+ (* (Max (Max NCM PT) (Min (+ (+ W PT) W) NPT)) (Max BWKR (* (+ (+ (+ WIQ WKR) (+ (+ WIQ WKR) (+ W PT))) BWKR) (* (/ (Max SL TIS) (Min PT W)) (/ (Max NCM PT) (Min PT W))))))
+
+Generation: 51
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max (- (Max rDD SL) (- NPT OWT)) WKR) (Max (Max rDD WKR) WKR)) W) W)
+Tree 1:
+ (* (Max (Max NCM PT) (Min PT W)) (Max BWKR (* (+ (+ (+ WIQ WKR) (* PT NIQ)) BWKR) (* (/ (Max SL TIS) (Min PT W)) PT))))
+
+Generation: 52
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (- MWT (- (- MWT (+ R WKR)) (+ WKR WKR))) WKR) (Max (+ (Max (Min (+ WKR WKR) (/ BWKR BNOR)) WKR) (+ W WKR)) (/ WKR (+ W WKR)))) W)
+Tree 1:
+ (* (* (+ (+ W PT) (* TIS (/ (Max SL TIS) (Min PT W)))) (/ (+ W PT) (Min PT W))) (Max (Min TIS NPT) (* (+ (+ (+ WIQ WKR) (* PT NIQ)) (Min (+ (* PT NIQ) WKR) (/ R NPT))) (* (+ (+ W PT) (Max PT PT)) (/ (Max (Max NCM PT) (Max NCM PT)) (Min PT W))))))
+
+Generation: 53
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max (/ (- MWT (+ WKR WKR)) (+ R WKR)) (Max (/ (/ WKR W) (+ W WKR)) WKR)) (Max (Max rDD WKR) WKR)) W) W)
+Tree 1:
+ (* (Max (Max NCM PT) (Min (+ (+ W PT) (Max PT PT)) NPT)) (Max BWKR (* (+ (+ (+ WIQ WKR) (* PT NIQ)) BWKR) (* (/ (Max SL TIS) (Min PT W)) (/ (Min PT W) (Min PT W))))))
+
+Generation: 54
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max (/ (/ WKR W) (+ W WKR)) WKR) (- MWT (+ (+ W WKR) WKR))) (Max (+ (Max (Min (+ WKR WKR) (+ WKR WKR)) WKR) (Max MWT WKR)) (/ WKR (+ W WKR)))) W)
+Tree 1:
+ (* (* (+ (+ (+ WIQ WKR) (* PT NIQ)) BWKR) (* (/ (Max SL TIS) (Min PT W)) (/ (Min PT W) (Min PT W)))) (Max (Min TIS NPT) (* (+ (+ (+ WIQ WKR) (* PT NIQ)) (Min (+ (* PT NIQ) WKR) (/ R (Max W NPT)))) (* (+ (Max (Max PT PT) TIS) (Max PT PT)) (/ (Max (Max NCM PT) (Max NCM PT)) (Min PT W))))))
+
+Generation: 55
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max (/ (/ WKR W) (+ W WKR)) WKR) (- MWT (+ (+ W WKR) WKR))) (Max (+ (Max (Min (+ WKR WKR) (+ WKR WKR)) WKR) (Max MWT WKR)) (/ WKR (+ W WKR)))) W)
+Tree 1:
+ (* (* (+ (+ W PT) (+ (* PT NIQ) WKR)) (/ (+ W PT) (Min PT W))) (Max (Min TIS NPT) (* (+ (+ (+ WIQ WKR) (* PT NIQ)) (Min (+ (* PT NIQ) WKR) (/ R (Max W NPT)))) (* (/ PT (Min PT W)) (/ (Max (Max NCM PT) (Max NCM PT)) (Min PT W))))))
+
+Generation: 56
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (- MWT (+ R WKR)) WKR) (Max (+ (Max (Min (+ WKR WKR) (/ BWKR BNOR)) WKR) (+ W WKR)) (/ WKR (+ W WKR)))) W)
+Tree 1:
+ (* (* (/ (Max SL TIS) (Min PT W)) (/ (+ (+ WIQ WKR) (* PT NIQ)) (Min PT W))) (Max (Min TIS NPT) (* (+ (+ (+ (+ WIQ WKR) (* PT NIQ)) (* PT NIQ)) (Min (+ (* PT NIQ) WKR) (/ R NPT))) (* (+ (+ W PT) (Max PT PT)) (/ (Max (Max NCM PT) (Max NCM PT)) (Min PT W))))))
+
+Generation: 57
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max (Max rDD WKR) WKR) W) W) W)
+Tree 1:
+ (* (Max (Max NCM PT) (Min (+ (+ W PT) (/ (Max (Max NCM PT) TIS) (Min PT W))) NPT)) (Max (Max SL TIS) (* (+ (+ (+ WIQ WKR) (Max NCM PT)) BWKR) (* (+ (+ (* PT NIQ) WKR) (+ (+ WIQ WKR) (* PT NIQ))) (/ (/ (Max SL TIS) (Min PT W)) (Min PT W))))))
+
+Generation: 58
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (- MWT (+ R WKR)) WKR) (Max (+ (Min (+ (+ WIQ WKR) (* OWT BNOR)) (Max (- NIQ WIQ) (Min TIS PT))) (+ W WKR)) (/ WKR (+ W WKR)))) W)
+Tree 1:
+ (* (* (/ (Max SL TIS) (Min PT W)) (/ (+ W PT) (Min PT W))) (Max (Min TIS NPT) (* (+ (+ (+ (+ WIQ WKR) (* PT NIQ)) (* PT NIQ)) (Min (+ (* PT NIQ) WKR) (Min PT W))) (* (+ (+ W PT) PT) (/ (Max (Max NCM PT) (Max NCM PT)) (Min PT W))))))
+
+Generation: 59
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (/ (- (- MWT MWT) (+ WKR WKR)) (+ R WKR)) (Max (Max rDD WKR) WKR)) W) W)
+Tree 1:
+ (* NCM (Max BWKR (* (+ (+ (+ (Max SL TIS) (* PT NIQ)) (* PT NIQ)) BWKR) (* (+ (+ W PT) (+ W PT)) (/ (/ (Max SL TIS) (Min PT W)) (Min PT W))))))
+
+Generation: 60
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (- MWT (+ R WKR)) WKR) W)
+Tree 1:
+ (* NCM (Max BWKR (* (+ (+ (+ WIQ WKR) (* PT NIQ)) BWKR) (* (/ (Max (Max NCM PT) (Max NCM PT)) (Min PT W)) (/ (/ (Max SL TIS) (Min PT W)) (Min PT W))))))
+
+Generation: 61
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: [0.0]
+Tree 0:
+ (/ (Max (Max (Max (/ (/ WKR (+ W WKR)) (- MWT (+ R WKR))) W) (Max (- MWT (+ R (Max rDD WKR))) WKR)) W) W)
+Tree 1:
+ (* (Max (Max NCM PT) (Min (+ (/ PT (Min PT W)) W) NPT)) (Max BWKR (* (+ (* PT NIQ) BWKR) (* (/ (/ (Max SL TIS) (Min PT W)) (Min PT W)) (/ (Min PT (Min PT W)) (Min PT W))))))
