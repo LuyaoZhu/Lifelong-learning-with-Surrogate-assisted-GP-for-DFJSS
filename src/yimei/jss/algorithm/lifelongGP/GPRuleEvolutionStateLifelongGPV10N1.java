@@ -108,6 +108,10 @@ public class GPRuleEvolutionStateLifelongGPV10N1 extends GPRuleEvolutionStateLif
 
     public int switchGeneration;
 
+    public static ArrayList<double[]> surrogatesMAE1 = new ArrayList<>();
+    public static ArrayList<double[]> surrogatesMAE2 = new ArrayList<>();
+    public static ArrayList<double[]> surrogatesMAE3 = new ArrayList<>();
+
     @Override
     public void setup(EvolutionState state, Parameter base) {
         Parameter p;
@@ -228,8 +232,8 @@ public class GPRuleEvolutionStateLifelongGPV10N1 extends GPRuleEvolutionStateLif
             if(minCurrentTask == 0){ //means already normalised
                 //based on the average fitness of top30% to determine whether we need to study this task only
                 double meanFitnessCurrentTask = top30PercentMean(population.subpops[0].individuals);
-                if (generation%generationPerTask >= switchGeneration  && onlyCurrentTaskPhase) {
-//                if (checker.check(meanFitnessCurrentTask) && onlyCurrentTaskPhase) {
+//                if (generation%generationPerTask >= switchGeneration  && onlyCurrentTaskPhase) {
+                if (checker.check(meanFitnessCurrentTask) && onlyCurrentTaskPhase) {
                     System.out.println("Converged at generation: " + generation);
                     switchGen.add(generation);
                     onlyCurrentTaskPhase = false;
@@ -476,6 +480,8 @@ public class GPRuleEvolutionStateLifelongGPV10N1 extends GPRuleEvolutionStateLif
             writeInvalidIndsNumGenToFile(invalidIndsNumber);
 
             writeBetterThanReferenceIndsNumGenToFile(betterThanReferenceIndsNumber);
+
+//            writeSurrogatesMAEToFile(surrogatesMAE1,surrogatesMAE2,surrogatesMAE3);
 
 //            writeTerimalOccuranceToFile(seqFeatureOccurrences, 0, "seq");
 //            writeTerimalOccuranceToFile(rouFeatureOccurrences, 1, "rou");
@@ -2021,7 +2027,7 @@ public class GPRuleEvolutionStateLifelongGPV10N1 extends GPRuleEvolutionStateLif
 
         Population newPop = (Population) this.population.emptyClone();//save the population with k*populationsize individuals
         Population tempNewPop; //save the population with populationsize individuals for combining them together to newPop
-        numRep = this.parameters.getIntWithDefault(new Parameter(P_REPLICATIONS), null, 2);
+        numRep = this.parameters.getIntWithDefault(new Parameter(P_REPLICATIONS), null, 3);
         for (int i = 0; i < numRep; i++) {
             tempNewPop = breeder.breedPopulation(this);
             for (int sub = 0; sub < this.population.subpops.length; sub++) {
@@ -2781,6 +2787,70 @@ public class GPRuleEvolutionStateLifelongGPV10N1 extends GPRuleEvolutionStateLif
             double avgImprovement = totalImprovement / (windowSize - 1);
 
             return avgImprovement < improvementThreshold;
+        }
+    }
+
+    public void writeSurrogatesMAEToFile(
+            ArrayList<double[]> mae1,
+            ArrayList<double[]> mae2,
+            ArrayList<double[]> mae3) {
+
+        File maeFile = new File(out_dir + "/job." + jobSeed + ".surrogatesMAE.csv");
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(maeFile))) {
+
+            // 1. 动态构建表头
+            StringBuilder header = new StringBuilder("Gen");
+            if (!mae1.isEmpty()) header.append(",Task1_WithinMAE,Task1_OutsideMAE");
+            if (!mae2.isEmpty()) header.append(",Task2_WithinMAE,Task2_OutsideMAE");
+            if (!mae3.isEmpty()) header.append(",Task3_WithinMAE,Task3_OutsideMAE");
+
+            writer.write(header.toString());
+            writer.newLine();
+
+            // 2. 找到实际的最大数据行数
+            int maxSize = Math.max(mae1.size(), Math.max(mae2.size(), mae3.size()));
+
+            // 3. 逐行写入数据
+            for (int i = 0; i < maxSize; i++) {
+                // 关键改动：倒推 Gen 的序号，确保最后一行 (i = maxSize - 1) 的结果为 399
+                int genNum = 400 - maxSize + i;
+                StringBuilder line = new StringBuilder(String.valueOf(genNum));
+
+                // Task 1
+                if (i < mae1.size()) {
+                    double[] m = mae1.get(i);
+                    line.append(",").append(m[0]).append(",").append(m[1]);
+                } else if (!mae1.isEmpty()) {
+                    line.append(",,");
+                }
+
+                // Task 2
+                if (i < mae2.size()) {
+                    double[] m = mae2.get(i);
+                    line.append(",").append(m[0]).append(",").append(m[1]);
+                } else if (!mae2.isEmpty()) {
+                    line.append(",,");
+                }
+
+                // Task 3
+                if (i < mae3.size()) {
+                    double[] m = mae3.get(i);
+                    line.append(",").append(m[0]).append(",").append(m[1]);
+                } else if (!mae3.isEmpty()) {
+                    line.append(",,");
+                }
+
+                writer.write(line.toString());
+                writer.newLine();
+            }
+
+            // 4. 清空全局缓存
+            mae1.clear();
+            mae2.clear();
+            mae3.clear();
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

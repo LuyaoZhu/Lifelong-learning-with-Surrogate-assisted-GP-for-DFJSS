@@ -81,12 +81,12 @@ public class MultipleTreeRuleTest{
 		//generate testset using simseed, replications
 		public SchedulingSet generateTestSet() {
 
-			String[] parameters = testSetName.split("-");  //for example: missing-0.95-4.0      utilLevel = parameters[1] = 0.85
-
-			int replications = Integer.valueOf(parameters[parameters.length-1]);
+//			String[] parameters = testSetName.split("-");  //for example: missing-0.95-4.0      utilLevel = parameters[1] = 0.85
+//
+//			int replications = Integer.valueOf(parameters[parameters.length-1]);
 
 	        return SchedulingSet.generateSet(simSeed, testScenario,
-	                testSetName, objectives, replications);
+	                testSetName, objectives, 50);
 	    }
 
 		public void writeToCSV() {

@@ -75,7 +75,8 @@ public class ATC extends AbstractRule {
         slack -= expWaitingTime;
         double prod1 = -Math.max(slack, 0.0d) / slackNorm;
 
-        return -(1.0 / op.getProcTime()) * Math.exp(prod1);
+//        return -(1.0 / op.getProcTime()) * Math.exp(prod1);
+        return -(op.getJob().getWeight() / op.getProcTime()) * Math.exp(prod1);
     }
 
 }

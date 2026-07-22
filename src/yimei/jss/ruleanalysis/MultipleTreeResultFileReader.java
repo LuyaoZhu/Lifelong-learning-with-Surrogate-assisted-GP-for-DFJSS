@@ -96,6 +96,9 @@ public class MultipleTreeResultFileReader extends ResultFileReader {
 		} else {
 			String[] spaceSegments = line.split("\\s+");
 			String[] fitVec = spaceSegments[1].split("\\[|\\]");
+			if(fitVec.length != 2) {
+				System.out.println(1);
+			}
 			double fitness = Double.valueOf(fitVec[1]);
 			MultiObjectiveFitness f = new MultiObjectiveFitness();
 			f.objectives = new double[1];

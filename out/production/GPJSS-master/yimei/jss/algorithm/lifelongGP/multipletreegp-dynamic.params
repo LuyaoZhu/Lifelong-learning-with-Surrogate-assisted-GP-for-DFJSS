@@ -289,43 +289,7 @@ eval.problem.eval-model.objectives = 1
 eval.problem.eval-model.objectives.0 = mean-weighted-tardiness
 eval.problem.eval-model.sim-models = 4
 
-trainingOrder = GUEN
-
-#-------instance, HMLV-Custom-------
-eval.problem.eval-model.sim-models.0.batch-size = small
-eval.problem.eval-model.sim-models.0.util-level = 0.60
-eval.problem.eval-model.sim-models.0.num-jobs = 500
-eval.problem.eval-model.sim-models.0.replications = 1
-eval.problem.eval-model.sim-models.0.num-machines = 2
-eval.problem.eval-model.sim-models.0.due-date-factor = 1.2
-eval.problem.eval-model.sim-models.0.distribution = GAMMA
-
-#-------instance, standard-discrete-job-------
-eval.problem.eval-model.sim-models.2.batch-size = single
-eval.problem.eval-model.sim-models.2.util-level = 0.85
-eval.problem.eval-model.sim-models.2.num-jobs = 3000
-eval.problem.eval-model.sim-models.2.replications = 1
-eval.problem.eval-model.sim-models.2.num-machines = 10
-eval.problem.eval-model.sim-models.2.due-date-factor = 1.5
-eval.problem.eval-model.sim-models.2.distribution = UNIFORM
-
-#-------instance, standard-discrete-batch-------
-eval.problem.eval-model.sim-models.1.batch-size = medium
-eval.problem.eval-model.sim-models.1.util-level = 0.85
-eval.problem.eval-model.sim-models.1.num-jobs = 300
-eval.problem.eval-model.sim-models.1.replications = 1
-eval.problem.eval-model.sim-models.1.num-machines = 5
-eval.problem.eval-model.sim-models.1.due-date-factor = 2.0
-eval.problem.eval-model.sim-models.1.distribution = EXPONENTIAL
-
-#-------instance, order based batch-------
-eval.problem.eval-model.sim-models.3.batch-size = large
-eval.problem.eval-model.sim-models.3.util-level = 0.95
-eval.problem.eval-model.sim-models.3.num-jobs = 3000
-eval.problem.eval-model.sim-models.3.replications = 1
-eval.problem.eval-model.sim-models.3.num-machines = 15
-eval.problem.eval-model.sim-models.3.due-date-factor = 4.0
-eval.problem.eval-model.sim-models.3.distribution = NORMAL
+trainingOrder = GEUN
 
 eval.problem.eval-model.rotate-sim-seed = true
 #terminals-from = relative
@@ -340,6 +304,6 @@ seedingRatio = 0.05
 surrogateThreshold = 5
 
 windowSize = 5
-improvementThreshold = 0.001
+improvementThreshold = 0.01
 
-switchGeneration = 5
+num-Rep = 3

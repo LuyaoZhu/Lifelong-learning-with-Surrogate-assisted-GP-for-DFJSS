@@ -93,6 +93,8 @@ public class surrogateClearingMultitreeEvaluatorV10N1 extends SimpleEvaluator {
 
     public static ArrayList<Double> averageFitnessGens = new ArrayList<>();
 
+    ArrayList<ArrayList<double[]>> lessThanTasks = new ArrayList<>();
+    ArrayList<ArrayList<double[]>> moreThanTasks = new ArrayList<>();
 
 
     public void setup(final EvolutionState state, final Parameter base) {
@@ -132,7 +134,7 @@ public class surrogateClearingMultitreeEvaluatorV10N1 extends SimpleEvaluator {
 
                 ((GPRuleEvolutionStateLifelongGPV10N1) state).minFitness = Arrays.stream(fitness).min().getAsDouble();
 
-                if( ((GPRuleEvolutionStateLifelongGPV10N1) state).minFitness < ((GPRuleEvolutionStateLifelongGPV10N1) state).refFit) {
+                if (((GPRuleEvolutionStateLifelongGPV10N1) state).minFitness < ((GPRuleEvolutionStateLifelongGPV10N1) state).refFit) {
                     //then normalise
                     ((GPRuleEvolutionStateLifelongGPV10N1) state).normalisePopulation(((GPRuleEvolutionStateLifelongGPV10N1) state).minFitness, ((GPRuleEvolutionStateLifelongGPV10N1) state).refFit);
                 }
@@ -162,14 +164,14 @@ public class surrogateClearingMultitreeEvaluatorV10N1 extends SimpleEvaluator {
                 tempindsCharListsMultiTree = indsCharListsMultiTreeCopy;
 
 
-                if(!((GPRuleEvolutionStateLifelongGPV10N1) state).onlyCurrentTaskPhase) {
+                if (!((GPRuleEvolutionStateLifelongGPV10N1) state).onlyCurrentTaskPhase) {
                     nonIntermediatePop = false;
                 }
 
-                if(state.generation == ((GPRuleEvolutionStateLifelongGPV10N1) state).generationPerTask - 1 ||
+                if (state.generation == ((GPRuleEvolutionStateLifelongGPV10N1) state).generationPerTask - 1 ||
                         state.generation == ((GPRuleEvolutionStateLifelongGPV10N1) state).generationPerTask * 2 - 1 ||
                         state.generation == ((GPRuleEvolutionStateLifelongGPV10N1) state).generationPerTask * 3 - 1 ||
-                        state.generation % ((GPRuleEvolutionStateLifelongGPV10N1) state).generationPerTask == 0 ) {
+                        state.generation % ((GPRuleEvolutionStateLifelongGPV10N1) state).generationPerTask == 0) {
                     nonIntermediatePop = true;
                 }
 
@@ -184,8 +186,8 @@ public class surrogateClearingMultitreeEvaluatorV10N1 extends SimpleEvaluator {
 //                this.evaluatePopulation(state, tempindsCharListsMultiTree, tempfitnessesForModel);
 
                 //we need to assign estimated fitness of all tasks based on weights
-                double[][] estimatedFitness = new double[state.generation/((GPRuleEvolutionStateLifelongGPV10N1) state).generationPerTask + 1][state.population.subpops[0].individuals.length];
-                for (int task=0; task<estimatedFitness.length; task++) {
+                double[][] estimatedFitness = new double[state.generation / ((GPRuleEvolutionStateLifelongGPV10N1) state).generationPerTask + 1][state.population.subpops[0].individuals.length];
+                for (int task = 0; task < estimatedFitness.length; task++) {
                     if (task == estimatedFitness.length - 1) {
                         estimatedFitness[task] = this.evaluatePopulation(state, tempindsCharListsMultiTree, tempfitnessesForModel, ((GPRuleEvolutionStateLifelongGPV10N1) state).surrogateThreshold);
                     } else {
@@ -198,15 +200,20 @@ public class surrogateClearingMultitreeEvaluatorV10N1 extends SimpleEvaluator {
                             }
                         }
                     }
-                    for (int ind=0; ind < estimatedFitness[task].length; ind++) {
-                        GPIndividual individual = (GPIndividual) state.population.subpops[0].individuals[ind];
-                        individual.caseFitness.add(estimatedFitness[task][ind]);
-                    }
+//                    for (int ind = 0; ind < estimatedFitness[task].length; ind++) {
+//                        GPIndividual individual = (GPIndividual) state.population.subpops[0].individuals[ind];
+//                        individual.caseFitness.add(estimatedFitness[task][ind]);
+//                    }
 
 
                 }
 
-                double[] thresholds = ((GPRuleEvolutionStateLifelongGPV10N1) state).thresholdsEveryGeneration.get(((GPRuleEvolutionStateLifelongGPV10N1) state).thresholdsEveryGeneration.size()-1);
+//                if (state.generation >= 300) {
+//                    //now calculate the MAE
+//                    calculateSurrogateMAE();
+//                }
+
+                double[] thresholds = ((GPRuleEvolutionStateLifelongGPV10N1) state).thresholdsEveryGeneration.get(((GPRuleEvolutionStateLifelongGPV10N1) state).thresholdsEveryGeneration.size() - 1);
 
                 //then assign combined fitness
                 for (int ind = 0; ind < state.population.subpops[0].individuals.length; ind++) {
@@ -231,6 +238,66 @@ public class surrogateClearingMultitreeEvaluatorV10N1 extends SimpleEvaluator {
             }
         }
 
+    }
+
+    private void calculateSurrogateMAE() {
+        //now calculate the MAE
+        for (int i = 0; i < lessThanTasks.size(); i++) {
+            double[] MAE = new double[2];
+
+            // 1. 计算小于阈值组的 MAE（跳过 Double.MAX_VALUE）
+            int lessSize = lessThanTasks.get(i).size();
+            int validLessCount = 0;
+            for (int j = 0; j < lessSize; j++) {
+                double val0 = lessThanTasks.get(i).get(j)[0];
+                double val1 = lessThanTasks.get(i).get(j)[1];
+
+                // 只要真实值或估计值任意一个是 Double.MAX_VALUE，就跳过
+                if (val0 == Double.MAX_VALUE || val1 == Double.MAX_VALUE) {
+                    continue;
+                }
+
+                MAE[0] += Math.abs(val0 - val1);
+                validLessCount++;
+            }
+            // 使用实际有效的样本数计算均值
+            if (validLessCount > 0) {
+                MAE[0] /= validLessCount;
+            } else {
+                MAE[0] = 0.0;
+            }
+
+            // 2. 计算大于阈值组的 MAE（跳过 Double.MAX_VALUE）
+            int moreSize = moreThanTasks.get(i).size();
+            int validMoreCount = 0;
+            for (int j = 0; j < moreSize; j++) {
+                double val0 = moreThanTasks.get(i).get(j)[0];
+                double val1 = moreThanTasks.get(i).get(j)[1];
+
+                // 只要真实值或估计值任意一个是 Double.MAX_VALUE，就跳过
+                if (val0 == Double.MAX_VALUE || val1 == Double.MAX_VALUE) {
+                    continue;
+                }
+
+                MAE[1] += Math.abs(val0 - val1);
+                validMoreCount++;
+            }
+            // 使用实际有效的样本数计算均值
+            if (validMoreCount > 0) {
+                MAE[1] /= validMoreCount;
+            } else {
+                MAE[1] = 0.0;
+            }
+
+            // 存储结果
+            if (i == 0) {
+                GPRuleEvolutionStateLifelongGPV10N1.surrogatesMAE1.add(MAE);
+            } else if (i == 1) {
+                GPRuleEvolutionStateLifelongGPV10N1.surrogatesMAE2.add(MAE);
+            } else if (i == 2) {
+                GPRuleEvolutionStateLifelongGPV10N1.surrogatesMAE3.add(MAE);
+            }
+        }
     }
 
     private void calculateSurrogateAccuracy() {
@@ -367,11 +434,131 @@ public class surrogateClearingMultitreeEvaluatorV10N1 extends SimpleEvaluator {
 
                         }
 
-                        if(dMin <= threshold) {
+                        if (dMin <= threshold) {
                             estimatedFitnesses[i] = fitnessesForModel[index];
                         } else {
                             estimatedFitnesses[i] = Double.MAX_VALUE;
                         }
+                    }else {
+                        estimatedFitnesses[i] = Double.MAX_VALUE;
+                    }
+                } else {
+                    estimatedFitnesses[i] = Double.MAX_VALUE;
+                }
+            }
+        }
+
+        return estimatedFitnesses;
+    }
+
+
+    public double[] evaluatePopulation(final EvolutionState state, int[][] indsCharListsMultiTree, double[] fitnessesForModel, double threshold, int taskID) {
+
+        int[][] indsCharListsIntermediatePop = phenotypicForSurrogate.muchBetterPhenotypicPopulation(state, phenoCharacterisation); //3. calculate the phenotypic characteristic
+
+        double[] estimatedFitnesses = new double[state.population.subpops[0].individuals.length];
+
+        for (int i = 0; i < state.population.subpops[0].individuals.length; i++) //
+        {
+            GPIndividual individual = (GPIndividual) state.population.subpops[0].individuals[i];
+            individual.PC = indsCharListsIntermediatePop[i];
+        }
+
+        ArrayList<double[]> lessThan5OneTask = new ArrayList<>();
+        ArrayList<double[]> moreThan5OneTask = new ArrayList<>();
+
+        for (int sub = 0; sub < state.population.subpops.length; sub++) {
+
+            for (int i = 0; i < state.population.subpops[sub].individuals.length; i++) //
+            {
+                Individual individual = state.population.subpops[sub].individuals[i];
+                if (indsCharListsMultiTree.length != 0) {
+                    //KNN
+                    //===============================start==============================================
+                    double dMin = Double.MAX_VALUE;
+                    int index = 0;
+
+                    int[] pcIntermediate = indsCharListsIntermediatePop[i];
+                    //calculate the fitness based on surrogate model
+                    for (int pc = 0; pc < indsCharListsMultiTree.length; pc++) {
+                        int[] pcModel = indsCharListsMultiTree[pc];
+                        double d = PhenoCharacterisation.distance(pcIntermediate, pcModel);
+                        if (d == 0) {
+                            dMin = d;
+                            index = pc;
+                            break;
+                        }
+
+                        if (d < dMin) {
+                            dMin = d;
+                            index = pc;
+                        }
+
+                    }
+
+                    if (state.generation >= 300) {
+                        //do real evaluation
+                        double realFitness = 0;
+
+                        RuleOptimizationProblem problem = (RuleOptimizationProblem) state.evaluator.p_problem;
+                        DynamicSimulation simulation = (DynamicSimulation) ((MultipleTreeMultipleRuleEvaluationModel) problem.getEvaluationModel()).getSchedulingSet().getSimulations().get(taskID);
+
+                        double[] refFitness = new double[1];
+
+                        for (int s = 0; s < 1; s++) {
+
+                            simulation.reset(608 + s);
+                            refFitness[s] = ((GPRuleEvolutionStateLifelongGPV10N1) state).calculateReferenceRuleFitness(simulation);
+
+                            // （可选但推荐）避免 refFit1[1] 为 0 导致除零
+                            if (refFitness[s] == 0.0) {
+                                throw new IllegalStateException("refFit1[1] is 0, cannot normalise ObjValue / refFit1[1].");
+                            }
+
+                            GPIndividual indi = (GPIndividual) individual;
+                            GPRule sequencingRule = new GPRule(RuleType.SEQUENCING, indi.trees[0]);
+                            GPRule routingRule = new GPRule(RuleType.ROUTING, indi.trees[1]);
+                            simulation.setSequencingRule(sequencingRule);
+                            simulation.setRoutingRule(routingRule);
+
+                            simulation.run();
+                            String objectiveName = state.parameters.getStringWithDefault(
+                                    new Parameter("eval.problem.eval-model.objectives.0"), null, "");
+                            Objective objective = Objective.get(objectiveName);
+
+                            double ObjValue = simulation.objectiveValue(objective);
+
+                            for (WorkCenter w : simulation.getSystemState().getWorkCenters()) {
+                                if (w.numOpsInQueue() > 100) {
+                                    if (objective.getName().endsWith("profit"))
+                                        ObjValue = -Double.MAX_VALUE;
+                                    else
+                                        ObjValue = Double.MAX_VALUE;
+                                    break;
+                                }
+                            }
+
+                            simulation.reset();
+
+                            // normalise
+                            realFitness += ObjValue / refFitness[s];
+
+                        }
+
+                        realFitness /= 1;
+
+                        //record the estimated fitness
+
+                        double[] map = new double[]{fitnessesForModel[index], realFitness};
+                        if (dMin <= threshold) {
+                            lessThan5OneTask.add(map);
+                        } else {
+                            moreThan5OneTask.add(map);
+                        }
+                    }
+
+                    if (dMin <= threshold) {
+                        estimatedFitnesses[i] = fitnessesForModel[index];
                     } else {
                         estimatedFitnesses[i] = Double.MAX_VALUE;
                     }
@@ -380,6 +567,12 @@ public class surrogateClearingMultitreeEvaluatorV10N1 extends SimpleEvaluator {
                 }
             }
         }
+
+        if (state.generation == 320) {
+            lessThanTasks.add(lessThan5OneTask);
+            moreThanTasks.add(moreThan5OneTask);
+        }
+
         return estimatedFitnesses;
     }
 
